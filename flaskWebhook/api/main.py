@@ -5,7 +5,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 # create a route for webhook
-@app.route('/webhook', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
     fulfillmentText = 'xxx'
